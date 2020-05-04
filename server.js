@@ -13,7 +13,7 @@ const formatMessage = require('./utils/messages');
 const { getCurrentUser, userJoin, userLeave, getRoomUsers } = require('./utils/users');
 
 //express middleware to server static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use("/",express.static(path.join(__dirname, 'public')));
 
 //inititalize the socket
 const io = socketio(server);
